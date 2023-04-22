@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('email_address');
             $table->string('address');
             $table->text('medical_concern');
+            $table->string('appointment_status')->default('Pending');
             $table->timestamps();
         });
     }

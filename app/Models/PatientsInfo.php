@@ -20,6 +20,7 @@ class PatientsInfo extends Model
         'contact_number',
         'email_address',
         'address',
-        'medical_concern'
+        'medical_concern',
+        'appointment_status',
     ];
 }

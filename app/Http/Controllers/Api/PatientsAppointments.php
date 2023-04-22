@@ -30,8 +30,16 @@ class PatientsAppointments extends Controller
         return response()->json(['success'=>'Appointment Created']);
     }
 
+    public function Update(Request $request, $appointmentId){
+        DB::table('patients_infos')
+        ->where('appointment_id', $appointmentId)
+        ->update(['appointment_status' => $request->input('appointment_status')]);
+
+    return response()->json(['success' => true]);
+    }
+
     public function delete($id){
-        DB::table('appointments')->where('appointment_id', $id)->delete();
+        DB::table('patients_infos')->where('appointment_id', $id)->delete();
         return response()->json(['message' => 'Appointment deleted successfully']);
     }
 }

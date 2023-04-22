@@ -36,4 +36,5 @@ Route::get('/user', [UserController::class, 'getUser'])->middleware('auth:api');
 //patient's db
 Route::get('/appointments',[PatientsAppointments::class,'index']);
 Route::post('/appointments/store',[PatientsAppointments::class,'store']);
+Route::post('/appointments/update/{appointmentId}', [PatientsAppointments::class, 'Update']);
 Route::get('/appointments/delete/{id}', [PatientsAppointments::class, 'delete']);
