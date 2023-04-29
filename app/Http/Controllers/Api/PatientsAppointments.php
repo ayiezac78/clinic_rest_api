@@ -15,7 +15,6 @@ class PatientsAppointments extends Controller
     }
     public function store(Request $request){
         $appointment = new PatientsInfo;
-        $appointment->appointment_id = $request->input('appointment_id');
         $appointment->appointment_date = $request->input('appointment_date');
         $appointment->schedule_time  = $request->input('schedule_time');
         $appointment->first_name = $request->input('first_name');
